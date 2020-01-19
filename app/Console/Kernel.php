@@ -24,7 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->call( function (){ \App\Cron\NewsCronCreator::WeatherNews(); } )->dailyAt('09:15');
+        $schedule->call( function (){ \App\Cron\NewsCronCreator::WeatherNews(); } )->dailyAt('09:00');
         $schedule->call( function (){ \App\Cron\NewsCronCreator::ResultsDayNews(); } )->dailyAt('20:00');
         // $schedule->command('inspire')
         //          ->hourly();
