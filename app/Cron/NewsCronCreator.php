@@ -30,7 +30,7 @@ class NewsCronCreator
             'pressure' => rand(180,200),
             'sost' => $sost[rand(0, count($sost)-1)]
         ];
-        NewsCreator::Create($data);
+        NewsCreator::CreateUpdate($data);
     }
 
     public static function ResultsDayNews(){
@@ -55,6 +55,6 @@ class NewsCronCreator
             'count' => count($news),
             'links' => $links
         ];
-        NewsCreator::Create($data);
+        NewsCreator::CreateUpdate($data);
     }
 }
